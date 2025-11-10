@@ -1,0 +1,12 @@
+#!/bin/sh
+# Pre-commit hook: build paper.pdf and abort commit if it fails
+
+echo "Running pre-commit check: building paper.pdf..."
+
+# Run the Makefile target
+if make paper.pdf; then
+    echo "✅ paper.pdf built successfully. Proceeding with commit."
+else
+    echo "❌ Build failed! Commit aborted."
+    exit 1
+fi
