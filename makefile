@@ -1,5 +1,5 @@
 paper.pdf: paper.tex plot-data.png
-	pdflatex paper.tex
+	pdflatex paper1.tex
 
 
 plot-%.png: %.dat plot.py
